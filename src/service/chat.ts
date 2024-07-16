@@ -20,7 +20,7 @@ const ChatService = {
     const headers = {
       'Content-Type': 'application/json'
     };
-    await axios.post('http://127.0.0.1:4545/chat', data, { headers, timeout: 10000 })
+    await axios.post(`${process.env.REACT_APP_DATA_API}/chat`, data, { headers, timeout: 10000 })
       .then((res) => {
         result = res.data || null;
         // console.log(res);
